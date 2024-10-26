@@ -5,7 +5,7 @@ function App() {
     return (
         <>
             <Navbar />
-            <ItemListContainer greeting="Binvenidos a Coder Shop" />
+            <ItemListContainer />
         </>
     );
 }

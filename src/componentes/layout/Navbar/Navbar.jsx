@@ -9,7 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import Badge from "../../common/Badge";
+import Badge from "../../common/Badge/Badge";
 import Logo from "../../../assets/logo.jpg";
 import Avatar from "@mui/material/Avatar";
 
