@@ -1,22 +1,27 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { ItemList } from "./ItemList";
-import "./itemlistcontainer.css";
-import { Container } from "@mui/material";
+import {products} from "../../../products"
+
 
 const ItemListContainer = () => {
-    const [products, setProducts] = useState([]);
+    const [items, setItems] = useState([]);
 
-    useEffect(() => {
-        const getProducts = fetch("https://fakestoreapi.com/products");
-        getProducts
-            .then((res) => res.json())
-            .then((res) => {
-                setProducts(res);
-            });
-    }, []);
+    // useEffect(() => {
+    //     const getProducts = fetch("https://fakestoreapi.com/products");
+    //     getProducts
+    //         .then((res) => res.json())
+    //         .then((res) => {
+    //             setProducts(res);
+    //         });
+    // }, []);
+    useEffect(()=>{
+        const getProducts = new Promise((resolve => resolve(products)))
+        getProducts.then(res => setItems(res))
+        
+    })
 
-    return <ItemList myProducts={products} />;
+    return <ItemList myProducts={items} />;
 };
 
 export default ItemListContainer;
