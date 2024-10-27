@@ -29,12 +29,21 @@
 
 .card__footer {
     color: steelblue;
+    display: flex;
+    flex-direction: column;
 }
 
 .card button {
-    border-radius: 10px;
-    border: 1px solid black;
-    padding: 8px 10px;
-    margin-top: 1rem;
-    cursor: pointer;
+    border-color: #aaa;
+    color: #aaa; 
+    text-transform: none;
 }
+
+.card button:hover {
+    background-color: transparent;
+    color: #000;
+    border-color: #000;
+}
+
+
+

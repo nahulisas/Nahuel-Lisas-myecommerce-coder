@@ -1,7 +1,10 @@
-const ItemDetail = () => {
-  return (
-    <div>ItemDetail</div>
-  )
-}
+const ItemDetail = ({item}) => {
 
-export default ItemDetail
+    
+    
+    return (
+      <div>producto de id {item.id}</div>
+)
+}
+  
+  export default ItemDetail

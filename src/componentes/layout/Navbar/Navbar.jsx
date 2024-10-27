@@ -12,6 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Badge from "../../common/Badge/Badge";
 import Logo from "../../../assets/logo.jpg";
 import Avatar from "@mui/material/Avatar";
+import { Link } from "react-router-dom";
 
 const pages = ["Inicio", "Deportivas", "Urbanas", "Trecking"];
 
@@ -41,7 +42,9 @@ function ResponsiveAppBar() {
                             display: { xs: "none", md: "flex" },
                         }}
                     >
+                        <Link to="/">
                         <img src={Logo} alt="" style={{ maxWidth: "100%" }} />
+                        </Link>
                     </Box>
 
                     <Box
@@ -113,7 +116,9 @@ function ResponsiveAppBar() {
                         ))}
                     </Box>
                     <Box sx={{ flexGrow: 0, display: "flex", gap: "10px" }}>
-                        <Badge />
+                        <Link to="/cart">
+                            <Badge />
+                        </Link>
                         <Avatar sx={{}}>U</Avatar>
                     </Box>
                 </Toolbar>
