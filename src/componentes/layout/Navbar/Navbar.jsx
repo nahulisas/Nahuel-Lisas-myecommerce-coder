@@ -1,129 +1,46 @@
-import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
+import { Avatar } from "@mui/material";
 import Badge from "../../common/Badge/Badge";
-import Logo from "../../../assets/logo.jpg";
-import Avatar from "@mui/material/Avatar";
+import "./navbar.css";
+import logo from "../../../assets/logo.jpg";
 import { Link } from "react-router-dom";
 
-const pages = ["Inicio", "Deportivas", "Urbanas", "Trecking"];
-
-function ResponsiveAppBar() {
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-
-    const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
-    };
-
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
-
+const Navbar = () => {
     return (
-        <AppBar
-            position="sticky"
-            sx={{
-                background: "#f1f8e9",
-            }}
-        >
-            <Container maxWidth="xl">
-                <Toolbar disableGutters>
-                    <Box
-                        sx={{
-                            maxWidth: "100px",
-                            display: { xs: "none", md: "flex" },
-                        }}
-                    >
-                        <Link to="/">
-                        <img src={Logo} alt="" style={{ maxWidth: "100%" }} />
+        <>
+            <nav className="navbar__container">
+                <div className="navbar__logo">
+                    <Link to="/">
+                        <img className="navbar__logo__img" src={logo} alt="" />
+                    </Link>
+                </div>
+                <menu className="navbar__menu__container">
+                    <ul className="navbar__menu">
+                        <Link className="navbar__menu__link" to="/">
+                            <li>Inicio</li>
                         </Link>
-                    </Box>
-
-                    <Box
-                        sx={{
-                            flexGrow: 1,
-                            display: { xs: "flex", md: "none" },
-                        }}
-                    >
-                        <IconButton
-                            size="large"
-                            aria-label="account of current user"
-                            aria-controls="menu-appbar"
-                            aria-haspopup="true"
-                            onClick={handleOpenNavMenu}
-                            color="black"
+                        <Link
+                            className="navbar__menu__link"
+                            to="/category/deportivas"
                         >
-                            <MenuIcon />
-                        </IconButton>
-                        <Menu
-                            id="menu-appbar"
-                            anchorEl={anchorElNav}
-                            anchorOrigin={{
-                                vertical: "bottom",
-                                horizontal: "left",
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: "top",
-                                horizontal: "left",
-                            }}
-                            open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
-                            sx={{ display: { xs: "block", md: "none" } }}
-                        >
-                            {pages.map((page) => (
-                                <MenuItem
-                                    key={page}
-                                    onClick={handleCloseNavMenu}
-                                >
-                                    <Typography sx={{ textAlign: "center" }}>
-                                        {page}
-                                    </Typography>
-                                </MenuItem>
-                            ))}
-                        </Menu>
-                    </Box>
-
-                    <Box
-                        sx={{
-                            flexGrow: 1,
-                            display: { xs: "none", md: "flex" },
-                            gap: "2rem",
-                            justifyContent: "center",
-                        }}
-                    >
-                        {pages.map((page) => (
-                            <Button
-                                size="large"
-                                key={page}
-                                onClick={handleCloseNavMenu}
-                                sx={{
-                                    my: 2,
-                                    color: "black",
-                                    display: "block",
-                                }}
-                            >
-                                {page}
-                            </Button>
-                        ))}
-                    </Box>
-                    <Box sx={{ flexGrow: 0, display: "flex", gap: "10px" }}>
-                        <Link to="/cart">
-                            <Badge />
+                            <li>Deportivas</li>
                         </Link>
-                        <Avatar sx={{}}>U</Avatar>
-                    </Box>
-                </Toolbar>
-            </Container>
-        </AppBar>
+                        <Link
+                            className="navbar__menu__link"
+                            to="/category/urbanas"
+                        >
+                            <li>Urbanas</li>
+                        </Link>
+                    </ul>
+                </menu>
+                <div className="navbar__ux">
+                    <Link to="/cart">
+                        <Badge />
+                    </Link>
+                    <Avatar />
+                </div>
+            </nav>
+        </>
     );
-}
-export default ResponsiveAppBar;
+};
+
+export default Navbar;

@@ -3,10 +3,7 @@
     justify-content: space-between;
     grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
-    margin: 1rem 0;
-    
     margin: 0 2rem;
-    
 }
 
 .title {
