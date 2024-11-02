@@ -1,0 +1,28 @@
+.cart__container {
+    width: 50%;
+    margin: 1rem auto;
+}
+
+.cart__title {
+    margin: 5rem 0 3rem 0;
+    border-bottom: 1px solid red;
+    padding: 0 0 1rem 0;
+}
+
+.product__cart__item {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+.product__image img {
+    width: 100px;
+}
+
+.product__title {
+    width: 200px;
+}

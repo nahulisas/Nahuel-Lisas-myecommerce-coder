@@ -7,8 +7,14 @@ export const CartContext = createContext();
 export const CartContextProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
 
+    const addCart = (producto) => {
+        setCart([...cart, producto]);
+    };
+    console.log(cart);
+
     // data es un objeto que recibe todas las funciones que desee pasar al value para luego usarlas en la app
-    let data = { cart };
+    let data = { cart, addCart };
+
     // el componente debe retornar el contexto en su metodo Provider
     return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 };

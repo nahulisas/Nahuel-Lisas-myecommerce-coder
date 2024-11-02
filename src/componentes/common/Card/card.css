@@ -1,14 +1,14 @@
 .card {
-    width: 100%;
-    margin: 0 auto;
+    width: 300px;
+    max-width: 300px;
     display: flex;
     gap: 2rem;
     flex-direction: column;
     margin-bottom: 2srem;
     padding: 1rem;
-    box-shadow: -1px 2px 28px 0px rgba(0,0,0,0.1);
-    -webkit-box-shadow: -1px 2px 28px 0px rgba(0,0,0,0.1);
-    -moz-box-shadow: -1px 2px 28px 0px rgba(0,0,0,0.1);
+    box-shadow: -1px 2px 28px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: -1px 2px 28px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: -1px 2px 28px 0px rgba(0, 0, 0, 0.1);
 }
 
 .card__image {
@@ -17,33 +17,30 @@
     display: flex;
     justify-content: center;
 }
-/* .card__content {
-    flex-grow: 1;
-    flex-shrink: 1;
-} */
+
 .card img {
     width: 70%;
     object-fit: contain;
-
 }
 
 .card__footer {
     color: steelblue;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
 
-.card button {
-    border-color: #aaa;
-    color: #aaa; 
-    text-transform: none;
+.card .add_btn {
+    border: 1px solid steelblue;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem;
+    cursor: pointer;
 }
-
-.card button:hover {
-    background-color: transparent;
-    color: #000;
-    border-color: #000;
+.card .add_btn:hover {
+    color: white;
+    background-color: steelblue;
+    transition: all 0.3s ease;
 }
-
-
-
