@@ -6,7 +6,7 @@ export let products = [
         description: "estas son las mejores",
         imageUrl:
             "https://res.cloudinary.com/dnqfh2chg/image/upload/v1686581567/images_teykwq.jpg",
-        stock: 12,
+        stock: 0,
         category: "deportivas",
     },
     {

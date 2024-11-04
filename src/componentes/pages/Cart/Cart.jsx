@@ -1,5 +1,7 @@
+import { Icon } from "@mui/material";
 import Counter from "../../common/Counter/Counter";
 import "./cart.css";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const Cart = ({ cart }) => {
     return (
@@ -25,7 +27,9 @@ const Cart = ({ cart }) => {
                             <div className="product__totalPay">
                                 {producto.price}
                             </div>
-                            <div className="product__delete">borrar</div>
+                            <Icon className="product__delete">
+                                <DeleteIcon />
+                            </Icon>
                         </div>
                     );
                 })}

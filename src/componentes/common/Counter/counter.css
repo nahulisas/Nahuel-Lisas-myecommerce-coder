@@ -1,3 +1,31 @@
-.contador__container {
+.counter__container {
     display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.counter__quantity__container {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border: 1px solid steelblue;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.counter__quiantity {
+    width: 30px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.counter__container .addCart__btn {
+    width: fit-content;
+    background-color: steelblue;
+    color: #fff;
+    margin-top: 1rem;
+}
+
+.counter__container .addCart__btn:hover {
+    background-color: rgba(70, 131, 180, 0.888);
 }

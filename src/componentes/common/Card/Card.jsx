@@ -18,12 +18,18 @@ const Card = ({ title, price, image, id, addToCart }) => {
                     <Button
                         variant="text"
                         size="small"
-                        sx={{ margin: "0", padding: "0" }}
+                        sx={{
+                            width: "fit-content",
+                            textDecoration: "none",
+                            ":hover": {
+                                textDecoration: "underline",
+                            },
+                        }}
                     >
                         ver detalle
                     </Button>
                 </Link>
-                <Icon className="add_btn" onClick={addToCart}>
+                <Icon className="add__cart__btn" onClick={addToCart}>
                     <ShoppingCartIcon />
                 </Icon>
             </div>

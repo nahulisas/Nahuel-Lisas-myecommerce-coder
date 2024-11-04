@@ -8,23 +8,30 @@ import { CartContextProvider } from "./context/CartContext/CartContext";
 function App() {
     return (
         <>
-            <BrowserRouter>
-                <CartContextProvider>
-                    <Navbar />
-                    <Routes>
-                        <Route path="/" element={<ItemListContainer />} />
-                        <Route path="/cart" element={<CartContainer />} />
-                        <Route
-                            path="/itemDetail/:id"
-                            element={<ItemDetailContainer />}
-                        />
-                        <Route
-                            path="/category/:categoryName"
-                            element={<ItemListContainer />}
-                        />
-                    </Routes>
-                </CartContextProvider>
-            </BrowserRouter>
+            <div
+                style={{
+                    backgroundColor: "#eee",
+                    height: "100vh",
+                }}
+            >
+                <BrowserRouter>
+                    <CartContextProvider>
+                        <Navbar />
+                        <Routes>
+                            <Route path="/" element={<ItemListContainer />} />
+                            <Route path="/cart" element={<CartContainer />} />
+                            <Route
+                                path="/itemDetail/:id"
+                                element={<ItemDetailContainer />}
+                            />
+                            <Route
+                                path="/category/:categoryName"
+                                element={<ItemListContainer />}
+                            />
+                        </Routes>
+                    </CartContextProvider>
+                </BrowserRouter>
+            </div>
         </>
     );
 }
