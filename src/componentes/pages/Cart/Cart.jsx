@@ -3,7 +3,9 @@ import Counter from "../../common/Counter/Counter";
 import "./cart.css";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, deleteProduct }) => {
+
+
     return (
         <>
             <div className="cart__container">
@@ -28,7 +30,7 @@ const Cart = ({ cart }) => {
                                 {producto.price}
                             </div>
                             <Icon className="product__delete">
-                                <DeleteIcon />
+                                <DeleteIcon onClick={() => deleteProduct(producto.id)} />
                             </Icon>
                         </div>
                     );

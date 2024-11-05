@@ -8,12 +8,7 @@ import { CartContextProvider } from "./context/CartContext/CartContext";
 function App() {
     return (
         <>
-            <div
-                style={{
-                    backgroundColor: "#eee",
-                    height: "100vh",
-                }}
-            >
+            <div>
                 <BrowserRouter>
                     <CartContextProvider>
                         <Navbar />

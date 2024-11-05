@@ -2,6 +2,7 @@ import { Button, Icon } from "@mui/material";
 import "./card.css";
 import { Link } from "react-router-dom";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import AddToCart from "../AddToCartBtn/AddToCart";
 
 const Card = ({ title, price, image, id, addToCart }) => {
     return (
@@ -32,6 +33,7 @@ const Card = ({ title, price, image, id, addToCart }) => {
                 <Icon className="add__cart__btn" onClick={addToCart}>
                     <ShoppingCartIcon />
                 </Icon>
+                {/* <AddToCart onClick={addToCart} /> */}
             </div>
         </div>
     );

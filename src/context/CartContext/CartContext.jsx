@@ -10,10 +10,17 @@ export const CartContextProvider = ({ children }) => {
     const addCart = (producto) => {
         setCart([...cart, producto]);
     };
-    console.log(cart);
+
+    const deleteProduct = (id) => {
+        let productDeleted = cart.filter(productos => productos.id != id)
+        setCart(productDeleted)
+        // console.log(productDeleted);
+
+}
+
 
     // data es un objeto que recibe todas las funciones que desee pasar al value para luego usarlas en la app
-    let data = { cart, addCart };
+    let data = { cart, addCart, deleteProduct};
 
     // el componente debe retornar el contexto en su metodo Provider
     return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
