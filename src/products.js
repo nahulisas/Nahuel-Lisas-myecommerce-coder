@@ -23,7 +23,7 @@ export let products = [
         id: "3",
         title: "Puma",
         price: 19000,
-        stock: 5,
+        stock: 10,
         description:
             "Las clasicas zapatillas que van para cualquier momento del dia",
         category: "urbanas",
@@ -34,7 +34,7 @@ export let products = [
         id: "4",
         title: "Jaguar",
         price: 17800,
-        stock: 5,
+        stock: 15,
         description: "Zapatillas de ultima generacion para el deporte",
         category: "urbanas",
         imageUrl:

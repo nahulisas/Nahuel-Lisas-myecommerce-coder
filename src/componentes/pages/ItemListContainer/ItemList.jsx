@@ -8,24 +8,16 @@ export const ItemList = ({ myProducts, agregarAlCarrito }) => {
                 <h2>Mis Productos</h2>
             </div>
             <div className="product__container">
-                {myProducts.map(({ id, price, title, imageUrl, stock }) => (
+                {myProducts.map((producto) => (
                     <Card
-                        key={id}
-                        title={title}
-                        price={price}
-                        image={imageUrl}
-                        stock={stock}
-                        id={id}
-                        addToCart={() =>
-                            agregarAlCarrito({
-                                id,
-                                price,
-                                title,
-                                imageUrl,
-                                stock,
-                                quantity: 1,
-                            })
-                        }
+                        key={producto.id}
+                        title={producto.title}
+                        price={producto.price}
+                        image={producto.imageUrl}
+                        stock={producto.stock}
+                        id={producto.id}
+                        quantity={producto.quantity}
+                        addToCart={() => agregarAlCarrito(producto)}
                     />
                 ))}
             </div>

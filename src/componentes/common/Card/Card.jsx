@@ -1,10 +1,10 @@
 import { Button, Icon } from "@mui/material";
 import "./card.css";
 import { Link } from "react-router-dom";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import AddToCart from "../AddToCartBtn/AddToCart";
 
-const Card = ({ title, price, image, id, addToCart }) => {
+const Card = ({ title, price, image, id, addToCart, quantity }) => {
+    console.log(quantity);
+
     return (
         <div className="card">
             <div className="card__image">
@@ -27,13 +27,10 @@ const Card = ({ title, price, image, id, addToCart }) => {
                             },
                         }}
                     >
-                        ver detalle
+                        Ver producto
                     </Button>
                 </Link>
-                <Icon className="add__cart__btn" onClick={addToCart}>
-                    <ShoppingCartIcon />
-                </Icon>
-                {/* <AddToCart onClick={addToCart} /> */}
+                <button onClick={addToCart}>agregar al carro</button>
             </div>
         </div>
     );

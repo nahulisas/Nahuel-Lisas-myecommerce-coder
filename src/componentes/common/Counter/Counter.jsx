@@ -1,15 +1,18 @@
-import { Button } from "@mui/material";
+import { Button, Icon } from "@mui/material";
 import { useState } from "react";
 import "./counter.css";
 import { useParams } from "react-router-dom";
+import { ShoppingCart } from "@mui/icons-material";
 
-const Counter = ({ stock, agregarAlCarrito }) => {
+const Counter = ({ stock, agregarAlCarrito, totalQuantity }) => {
     let [contador, setContador] = useState(1);
 
     const { id } = useParams();
 
     const sumar = () => {
-        setContador(contador + 1);
+        stock - totalQuantity > contador
+            ? setContador(contador + 1)
+            : alert("stock maximo");
     };
 
     const restar = () => {
@@ -25,9 +28,12 @@ const Counter = ({ stock, agregarAlCarrito }) => {
                     </div>
                     <Button onClick={sumar}>+</Button>
                 </div>
+
                 {location.pathname === `/itemDetail/${id}` && (
                     <Button
-                        disabled={stock == 0 ? true : false}
+                        disabled={
+                            stock == 0 || totalQuantity == stock ? true : false
+                        }
                         className="addCart__btn"
                         onClick={() => agregarAlCarrito(contador)}
                     >

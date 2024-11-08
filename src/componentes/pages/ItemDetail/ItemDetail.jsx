@@ -6,7 +6,7 @@ import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 
-const ItemDetail = ({ item, agregarAlCarrito }) => {
+const ItemDetail = ({ item, agregarAlCarrito, totalQuantity }) => {
     return (
         <>
             <section className="item__detail__container">
@@ -26,7 +26,9 @@ const ItemDetail = ({ item, agregarAlCarrito }) => {
                             <Counter
                                 stock={item.stock}
                                 agregarAlCarrito={agregarAlCarrito}
+                                totalQuantity={totalQuantity(item.id)}
                             />
+                            {totalQuantity(item.id)}
                         </div>
                         <div className="item__detail__info">
                             <div className="item__detail__icon">
