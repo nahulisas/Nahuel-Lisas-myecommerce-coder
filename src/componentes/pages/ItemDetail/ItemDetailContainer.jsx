@@ -15,16 +15,20 @@ const ItemDetailContainer = () => {
         setItem(findProduct);
     }, [id]);
 
-    let agregarAlCarrito = (cantidad) => {
-        let producto = { ...item, quantity: cantidad };
-        addCart(producto);
+    // let agregarAlCarrito = (cantidad) => {
+    //     let producto = { ...item, quantity: cantidad };
+    //     addCart(producto);
+    // };
+
+    const addToCart = (producto) => {
+        addCart({ ...producto, quantity: 1 });
     };
 
     return (
         <ItemDetail
             item={item}
-            agregarAlCarrito={agregarAlCarrito}
-            totalQuantity={totalQuantity}
+            agregarAlCarrito={addToCart}
+            totalQuantity={totalQuantity(item.id)}
         />
     );
 };

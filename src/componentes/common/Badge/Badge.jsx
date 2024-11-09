@@ -17,9 +17,14 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 export default function CustomizedBadges() {
     const { cart } = useContext(CartContext);
 
+    // definimos la cantidad de items que se encuentran en nuestro carrito
+    const totalInCart = cart.reduce((acum, producto) => {
+        return acum + producto.quantity;
+    }, 0);
+
     return (
         <IconButton aria-label="cart">
-            <StyledBadge badgeContent={cart.length} color="secondary">
+            <StyledBadge badgeContent={totalInCart} color="secondary">
                 <ShoppingCartIcon />
             </StyledBadge>
         </IconButton>

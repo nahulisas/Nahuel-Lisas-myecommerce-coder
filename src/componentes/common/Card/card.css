@@ -30,22 +30,20 @@
     gap: 1rem;
 }
 
-.card .add__cart__btn {
-    width: fit-content;
-    border: 1px solid steelblue;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.2rem;
-    cursor: pointer;
-}
-.card .add__cart__btn:hover {
-    color: white;
-    background-color: steelblue;
-    transition: all 0.3s ease;
-}
-
 .view__detail__btn {
     width: fit-content;
+}
+
+.quantity_in_cart {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    right: -10px;
+    background-color: orange;
+    border-radius: 50px;
+    font-size: 0.7rem;
 }

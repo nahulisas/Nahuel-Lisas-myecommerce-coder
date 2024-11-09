@@ -73,3 +73,12 @@
     align-items: center;
     gap: 1rem;
 }
+
+.quantity_in_cart {
+    background-color: red;
+}
+
+.link {
+    color: white;
+    display: flex;
+}

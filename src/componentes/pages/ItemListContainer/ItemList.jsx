@@ -1,7 +1,7 @@
 import Card from "../../common/Card/Card";
 import "./itemlist.css";
 
-export const ItemList = ({ myProducts, agregarAlCarrito }) => {
+export const ItemList = ({ myProducts, agregarAlCarrito, totalQuantity }) => {
     return (
         <>
             <div className="title">
@@ -16,7 +16,7 @@ export const ItemList = ({ myProducts, agregarAlCarrito }) => {
                         image={producto.imageUrl}
                         stock={producto.stock}
                         id={producto.id}
-                        quantity={producto.quantity}
+                        quantityInCart={totalQuantity(producto.id)}
                         addToCart={() => agregarAlCarrito(producto)}
                     />
                 ))}

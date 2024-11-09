@@ -1,10 +1,10 @@
-import { Button, Icon } from "@mui/material";
+import { Icon } from "@mui/material";
 import Counter from "../../common/Counter/Counter";
 import "./cart.css";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Link } from "react-router-dom";
 
-const Cart = ({ cart, deleteProduct, clearCart }) => {
+const Cart = ({ cart, deleteProduct, clearCart, totalQuantity }) => {
     return (
         <>
             <div className="cart__container">
@@ -14,7 +14,7 @@ const Cart = ({ cart, deleteProduct, clearCart }) => {
                     {cart.length > 1 && (
                         <div onClick={clearCart} className="clear__cart">
                             <Icon>
-                                <DeleteIcon />
+                                <DeleteIcon sx={{ width: "1.2rem" }} />
                             </Icon>
                             <p>Vaciar carrito</p>
                         </div>
@@ -43,14 +43,13 @@ const Cart = ({ cart, deleteProduct, clearCart }) => {
                                 </div>
                             </Link>
                             <div className="product__counter">
-                                {producto.quantity}
-                                {/* <Counter
-                                    stock={producto.stock}
+                                <Counter
+                                    producto={producto}
                                     totalQuantity={totalQuantity(producto.id)}
-                                /> */}
+                                />
                             </div>
                             <div className="product__totalPay">
-                                ${producto.price}
+                                ${producto.price * producto.quantity}
                             </div>
                             <Icon>
                                 <DeleteIcon

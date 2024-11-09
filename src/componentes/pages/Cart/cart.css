@@ -47,6 +47,7 @@
     display: flex;
     cursor: pointer;
     align-items: center;
+    justify-content: center;
 }
 
 .product__delete:hover {

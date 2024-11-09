@@ -1,10 +1,12 @@
-import { Box, Icon, Typography } from "@mui/material";
-import Counter from "../../common/Counter/Counter";
+import { Box, Button, Icon, IconButton, Typography } from "@mui/material";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+
 import "./itemdetail.css";
 import GppGoodIcon from "@mui/icons-material/GppGood";
 import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ item, agregarAlCarrito, totalQuantity }) => {
     return (
@@ -22,13 +24,56 @@ const ItemDetail = ({ item, agregarAlCarrito, totalQuantity }) => {
                             <p>Precio especial</p>
                             <h4>${item.price}</h4>
                         </div>
-                        <div className="contador">
-                            <Counter
-                                stock={item.stock}
-                                agregarAlCarrito={agregarAlCarrito}
-                                totalQuantity={totalQuantity(item.id)}
-                            />
-                            {totalQuantity(item.id)}
+                        <div className="add_to_cart">
+                            <Button
+                                className="item_detail_btn"
+                                onClick={() => agregarAlCarrito(item)}
+                                disabled={totalQuantity == item.stock && true}
+                                sx={{
+                                    padding: "7px",
+                                    marginRight: "20px",
+                                    border: "1px solid steelblue",
+                                    "&.Mui-disabled": {
+                                        borderColor: "lightgray",
+                                        background: "lightgray",
+                                        color: "white",
+                                    },
+                                }}
+                            >
+                                Agregar al carrito
+                            </Button>
+                            <IconButton
+                                className="pepe"
+                                size="small"
+                                sx={{
+                                    position: "relative",
+                                    borderRadius: "5px",
+                                    background: "steelblue",
+                                    width: "fit-content",
+                                    padding: ".5rem",
+                                    color: "white",
+                                    ":hover": {
+                                        backgroundColor: "steelblue",
+                                    },
+                                    "&.Mui-disabled": {
+                                        color: "white",
+                                        backgroundColor: "lightgray",
+                                    },
+                                }}
+
+                                // onClick={addToCart}
+                            >
+                                <Link className="link" to={"/cart"}>
+                                    <ShoppingCartOutlinedIcon />
+                                </Link>
+                                {totalQuantity > 0 && (
+                                    <div className="quantity_in_cart">
+                                        <span className="">
+                                            {totalQuantity}
+                                        </span>
+                                    </div>
+                                )}
+                            </IconButton>
                         </div>
                         <div className="item__detail__info">
                             <div className="item__detail__icon">

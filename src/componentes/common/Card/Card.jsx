@@ -1,10 +1,17 @@
-import { Button, Icon } from "@mui/material";
+import { Button, Icon, IconButton } from "@mui/material";
 import "./card.css";
 import { Link } from "react-router-dom";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
-const Card = ({ title, price, image, id, addToCart, quantity }) => {
-    console.log(quantity);
-
+const Card = ({
+    title,
+    price,
+    image,
+    id,
+    addToCart,
+    stock,
+    quantityInCart,
+}) => {
     return (
         <div className="card">
             <div className="card__image">
@@ -30,7 +37,34 @@ const Card = ({ title, price, image, id, addToCart, quantity }) => {
                         Ver producto
                     </Button>
                 </Link>
-                <button onClick={addToCart}>agregar al carro</button>
+                <IconButton
+                    className="pepe"
+                    size="small"
+                    sx={{
+                        position: "relative",
+                        borderRadius: "5px",
+                        background: "steelblue",
+                        width: "fit-content",
+                        padding: ".5rem",
+                        color: "white",
+                        ":hover": {
+                            backgroundColor: "steelblue",
+                        },
+                        "&.Mui-disabled": {
+                            color: "white",
+                            backgroundColor: "lightgray",
+                        },
+                    }}
+                    disabled={quantityInCart >= stock && true}
+                    onClick={addToCart}
+                >
+                    <ShoppingCartOutlinedIcon />
+                    {quantityInCart > 0 && (
+                        <div className="quantity_in_cart">
+                            <span className="">{quantityInCart}</span>
+                        </div>
+                    )}
+                </IconButton>
             </div>
         </div>
     );
