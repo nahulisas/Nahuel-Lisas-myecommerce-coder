@@ -2,6 +2,9 @@ import Card from "../../common/Card/Card";
 import "./itemlist.css";
 
 export const ItemList = ({ myProducts, agregarAlCarrito, totalQuantity }) => {
+
+   
+    
     return (
         <>
             <div className="title">

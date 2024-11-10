@@ -5,6 +5,9 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { Link } from "react-router-dom";
 
 const Cart = ({ cart, deleteProduct, clearCart, totalQuantity }) => {
+
+    
+    
     return (
         <>
             <div className="cart__container">

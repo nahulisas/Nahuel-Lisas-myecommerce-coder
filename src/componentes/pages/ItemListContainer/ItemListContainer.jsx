@@ -39,6 +39,7 @@ const ItemListContainer = () => {
             myProducts={items}
             agregarAlCarrito={addToCart}
             totalQuantity={totalQuantity}
+            
         />
     );
 };

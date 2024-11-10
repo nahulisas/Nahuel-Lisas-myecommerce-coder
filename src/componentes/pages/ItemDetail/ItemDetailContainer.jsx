@@ -22,10 +22,13 @@ const ItemDetailContainer = () => {
 
     const addToCart = (producto) => {
         addCart({ ...producto, quantity: 1 });
+        
+        
     };
 
     return (
         <ItemDetail
+        
             item={item}
             agregarAlCarrito={addToCart}
             totalQuantity={totalQuantity(item.id)}

@@ -6,12 +6,12 @@ export const CartContext = createContext();
 // crear y exportar el componente proveedor del contexto y debe recibir como parametro el children para luego retornarlo
 export const CartContextProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
-
+    
     const addCart = (producto) => {
         let isInCart = cart.some(
             (productoInCart) => productoInCart.id == producto.id
         );
-
+        
         if (isInCart) {
             let nuevoArray = cart.map((elemento) => {
                 if (elemento.id === producto.id) {
@@ -23,22 +23,27 @@ export const CartContextProvider = ({ children }) => {
                     return elemento;
                 }
             });
-
+            
             setCart(nuevoArray);
         } else {
             setCart([...cart, producto]);
         }
     };
 
+    console.log(cart);
+    
+    
     const deleteProduct = (id) => {
         let productDeleted = cart.filter((productos) => productos.id !== id);
         setCart(productDeleted);
     };
 
+
     const totalQuantity = (id) => {
         let quiantityInCart = cart.find((producto) => producto.id === id);
         return quiantityInCart ? quiantityInCart.quantity : 0;
     };
+
 
     const clearCart = () => {
         setCart([]);

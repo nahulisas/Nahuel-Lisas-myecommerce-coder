@@ -1,12 +1,12 @@
 import { Box, Button, Icon, IconButton, Typography } from "@mui/material";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-
 import "./itemdetail.css";
 import GppGoodIcon from "@mui/icons-material/GppGood";
 import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import { Link } from "react-router-dom";
+
 
 const ItemDetail = ({ item, agregarAlCarrito, totalQuantity }) => {
     return (
@@ -24,6 +24,8 @@ const ItemDetail = ({ item, agregarAlCarrito, totalQuantity }) => {
                             <p>Precio especial</p>
                             <h4>${item.price}</h4>
                         </div>
+                       
+                        
                         <div className="add_to_cart">
                             <Button
                                 className="item_detail_btn"
@@ -42,38 +44,36 @@ const ItemDetail = ({ item, agregarAlCarrito, totalQuantity }) => {
                             >
                                 Agregar al carrito
                             </Button>
-                            <IconButton
-                                className="pepe"
-                                size="small"
-                                sx={{
-                                    position: "relative",
-                                    borderRadius: "5px",
-                                    background: "steelblue",
-                                    width: "fit-content",
-                                    padding: ".5rem",
-                                    color: "white",
-                                    ":hover": {
-                                        backgroundColor: "steelblue",
-                                    },
-                                    "&.Mui-disabled": {
+                            <Link className="link" to={"/cart"}>
+                                <IconButton
+                                    
+                                    size="small"
+                                    sx={{
+                                        position: "relative",
+                                        borderRadius: "5px",
+                                        background: "steelblue",
+                                        width: "fit-content",
+                                        padding: ".5rem",
                                         color: "white",
-                                        backgroundColor: "lightgray",
-                                    },
-                                }}
-
-                                // onClick={addToCart}
-                            >
-                                <Link className="link" to={"/cart"}>
-                                    <ShoppingCartOutlinedIcon />
-                                </Link>
-                                {totalQuantity > 0 && (
-                                    <div className="quantity_in_cart">
-                                        <span className="">
-                                            {totalQuantity}
-                                        </span>
-                                    </div>
-                                )}
-                            </IconButton>
+                                        ":hover": {
+                                            backgroundColor: "steelblue",
+                                        },
+                                        "&.Mui-disabled": {
+                                            color: "white",
+                                            backgroundColor: "lightgray",
+                                        },
+                                    }}     
+                                >
+                                        <ShoppingCartOutlinedIcon />
+                                    {totalQuantity > 0 && (
+                                        <div className="quantity_in_cart">
+                                            <span className="">
+                                                {totalQuantity}
+                                            </span>
+                                        </div>
+                                    )}
+                                </IconButton>
+                            </Link>
                         </div>
                         <div className="item__detail__info">
                             <div className="item__detail__icon">

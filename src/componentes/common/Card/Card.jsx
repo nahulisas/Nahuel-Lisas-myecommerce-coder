@@ -1,4 +1,4 @@
-import { Button, Icon, IconButton } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
 import "./card.css";
 import { Link } from "react-router-dom";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
@@ -38,7 +38,6 @@ const Card = ({
                     </Button>
                 </Link>
                 <IconButton
-                    className="pepe"
                     size="small"
                     sx={{
                         position: "relative",

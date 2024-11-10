@@ -82,3 +82,7 @@
     color: white;
     display: flex;
 }
+
+.add_to_cart {
+    display: flex;
+}
