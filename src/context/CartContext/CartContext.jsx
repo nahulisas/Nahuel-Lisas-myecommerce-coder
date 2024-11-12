@@ -30,7 +30,7 @@ export const CartContextProvider = ({ children }) => {
         }
     };
 
-    console.log(cart);
+
     
     
     const deleteProduct = (id) => {
@@ -45,9 +45,20 @@ export const CartContextProvider = ({ children }) => {
     };
 
 
+    const getTotal = cart.reduce((acc, producto) => {
+        return (acc + (producto.price * producto.quantity))
+    }  ,0).toLocaleString("es-AR", {
+        
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+    })
+
+
     const clearCart = () => {
         setCart([]);
     };
+
+    
 
     // data es un objeto que recibe todas las funciones que desee pasar al value para luego usarlas en la app
     let data = {
@@ -56,6 +67,8 @@ export const CartContextProvider = ({ children }) => {
         deleteProduct,
         totalQuantity,
         clearCart,
+        getTotal,
+        
     };
 
     // el componente debe retornar el contexto en su metodo Provider

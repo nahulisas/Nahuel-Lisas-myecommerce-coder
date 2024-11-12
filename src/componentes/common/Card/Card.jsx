@@ -37,6 +37,7 @@ const Card = ({
                         Ver producto
                     </Button>
                 </Link>
+                
                 <IconButton
                     size="small"
                     sx={{

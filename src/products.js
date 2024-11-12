@@ -12,7 +12,7 @@ export let products = [
     {
         id: "2",
         title: "wilson advance",
-        price: 14500,
+        price: 14500.30,
         stock: 5,
         description: "Ultra livianas y cuentan con camara de aire",
         category: "deportivas",
