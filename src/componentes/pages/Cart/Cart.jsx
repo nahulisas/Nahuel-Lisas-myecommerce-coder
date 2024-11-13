@@ -4,13 +4,7 @@ import "./cart.css";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Link } from "react-router-dom";
 
-
 const Cart = ({ cart, deleteProduct, clearCart, totalQuantity, getTotal }) => {
-
-    
-    
-
-    
     return (
         <>
             <div className="cart__container">
@@ -19,7 +13,6 @@ const Cart = ({ cart, deleteProduct, clearCart, totalQuantity, getTotal }) => {
                     <h3>Productos</h3>
                 </div>
                 <div className="cart__products__container">
-
                     <div className="cart__products">
                         {cart.length > 1 && (
                             <div onClick={clearCart} className="clear__cart">
@@ -31,7 +24,10 @@ const Cart = ({ cart, deleteProduct, clearCart, totalQuantity, getTotal }) => {
                         )}
                         {cart.map((producto) => {
                             return (
-                                <div key={producto.id} className="product__cart__item">
+                                <div
+                                    key={producto.id}
+                                    className="product__cart__item"
+                                >
                                     <Link
                                         to={`/itemDetail/${producto.id}`}
                                         className="product__link"
@@ -46,7 +42,7 @@ const Cart = ({ cart, deleteProduct, clearCart, totalQuantity, getTotal }) => {
                                     <Link
                                         to={`/itemDetail/${producto.id}`}
                                         className="product__link"
-                                        >
+                                    >
                                         <div className="product__title">
                                             {producto.title}
                                         </div>
@@ -54,17 +50,21 @@ const Cart = ({ cart, deleteProduct, clearCart, totalQuantity, getTotal }) => {
                                     <div className="product__counter">
                                         <Counter
                                             producto={producto}
-                                            totalQuantity={totalQuantity(producto.id)}
-                                            />
+                                            totalQuantity={totalQuantity(
+                                                producto.id
+                                            )}
+                                        />
                                     </div>
                                     <div className="product__totalPay">
                                         ${producto.price * producto.quantity}
                                     </div>
                                     <Icon>
                                         <DeleteIcon
-                                            onClick={() => deleteProduct(producto.id)}
+                                            onClick={() =>
+                                                deleteProduct(producto.id)
+                                            }
                                             className="product__delete"
-                                            />
+                                        />
                                     </Icon>
                                 </div>
                             );
@@ -73,10 +73,14 @@ const Cart = ({ cart, deleteProduct, clearCart, totalQuantity, getTotal }) => {
                     <div className="cart__totalToPay">
                         <div className="total">
                             <p>Total</p>
-                            <p>{getTotal}</p>
+                            <p>${getTotal}</p>
                         </div>
-                        <button className="totalPay_btn">finalizar compra</button>
-                        <button className="totalPay_btn">continuar comprando</button>
+                        <button className="totalPay_btn">
+                            finalizar compra
+                        </button>
+                        <button className="totalPay_btn">
+                            continuar comprando
+                        </button>
                     </div>
                 </div>
             </div>
