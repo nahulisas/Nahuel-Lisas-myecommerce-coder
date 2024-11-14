@@ -20,15 +20,21 @@ const Navbar = () => {
                         </Link>
                         <Link
                             className="navbar__menu__link"
-                            to="/category/deportivas"
+                            to="/category/monitores"
                         >
-                            <li>Deportivas</li>
+                            <li>Monitores</li>
                         </Link>
                         <Link
                             className="navbar__menu__link"
-                            to="/category/urbanas"
+                            to="/category/gabinetes"
                         >
-                            <li>Urbanas</li>
+                            <li>Gabinetes</li>
+                        </Link>
+                        <Link
+                            className="navbar__menu__link"
+                            to="/category/placas_de_video"
+                        >
+                            <li>Placas de video</li>
                         </Link>
                     </ul>
                 </menu>
