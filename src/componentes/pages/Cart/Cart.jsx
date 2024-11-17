@@ -75,9 +75,11 @@ const Cart = ({ cart, deleteProduct, clearCart, totalQuantity, getTotal }) => {
                             <p>Total</p>
                             <p>${getTotal}</p>
                         </div>
+                        <Link to="/checkout">
                         <button className="totalPay_btn">
                             finalizar compra
                         </button>
+                        </Link>
                         <button className="totalPay_btn">
                             continuar comprando
                         </button>
