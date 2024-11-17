@@ -5,6 +5,8 @@ import logo from "../../../assets/logo.jpg";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+
+
     return (
         <>
             <nav className="navbar__container">
@@ -35,6 +37,18 @@ const Navbar = () => {
                             to="/category/placas_de_video"
                         >
                             <li>Placas de video</li>
+                        </Link>
+                        <Link
+                            className="navbar__menu__link"
+                            to="/category/mothers"
+                        >
+                            <li>Motherboards</li>
+                        </Link>
+                        <Link
+                            className="navbar__menu__link"
+                            to="/category/memorias"
+                        >
+                            <li>Memorias RAM</li>
                         </Link>
                     </ul>
                 </menu>

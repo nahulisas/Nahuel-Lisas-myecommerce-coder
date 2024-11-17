@@ -1,31 +1,29 @@
 import { useState, useEffect, useContext } from "react";
 import { ItemList } from "./ItemList";
-import { products } from "../../../products";
 import { useParams } from "react-router-dom";
 import CartContext from "../../../context/CartContext/CartContext";
+import { db } from "../../../firebaseConfig";
+import { collection, getDocs, query, where } from "firebase/firestore";
+// import { products } from "../../../products";
 
 const ItemListContainer = () => {
     const { categoryName } = useParams();
     const [items, setItems] = useState([]);
 
-    // useEffect(() => {
-    //     const getProducts = fetch("https://fakestoreapi.com/products");
-    //     getProducts
-    //         .then((res) => res.json())
-    //         .then((res) => {
-    //             setProducts(res);
-    //         });
-    // }, []);
+    useEffect(()=>{
+        const productsCollection = collection(db, "products");
+        let  docRef = productsCollection;
+        if (categoryName) {
+            docRef = query(productsCollection, where("category", "==", categoryName))
+        }
+        getDocs(docRef).then(res =>{
+            let products = res.docs.map(doc => {
+                return {...doc.data(), id: doc.id}
+            })
+            setItems(products)
+        })
+    })
 
-    useEffect(() => {
-        const filters = products.filter(
-            (products) => products.category === categoryName
-        );
-        const getProducts = new Promise((resolve) =>
-            resolve(categoryName ? filters : products)
-        );
-        getProducts.then((res) => setItems(res));
-    }, [categoryName]);
 
     // agregar al carrito directamente desde el itemListContainer sin entrar al itemDetail del producto
     const { addCart, totalQuantity } = useContext(CartContext);
@@ -34,13 +32,17 @@ const ItemListContainer = () => {
         addCart({ ...producto, quantity: 1 });
     };
 
+
     return (
+       
         <ItemList
             myProducts={items}
             agregarAlCarrito={addToCart}
             totalQuantity={totalQuantity}
             
-        />
+            />
+       
+        
     );
 };
 

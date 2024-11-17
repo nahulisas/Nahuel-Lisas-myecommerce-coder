@@ -1,5 +1,6 @@
 .navbar__container {
-    position: static;
+    position: fixed;
+    top: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -10,10 +11,11 @@
     -webkit-box-shadow: -2px 4px 5px 1px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: -2px 4px 5px 1px rgba(0, 0, 0, 0.1);
     background-color: #fff;
+    z-index: 1;
 }
 
 .navbar__logo__img {
-    width: 150px;
+    width: 60px;
     display: flex;
     object-fit: cover;
 }

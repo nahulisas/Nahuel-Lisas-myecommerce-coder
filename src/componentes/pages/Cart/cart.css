@@ -2,16 +2,19 @@
     width: 80%;
     margin: 1rem auto;
     padding: 2rem 0;
+    margin-top: 70px;
 }
 
 .cart__products__container {
     display: flex;
     flex-grow: 1;
     gap: 1rem;
+    position: relative;
 }
 
 .cart__products {
     flex-grow: 1;
+
 }
 
 .cart__totalToPay {
@@ -74,6 +77,7 @@
 .product__title {
     width: 200px;
     text-transform: uppercase;
+    
 }
 
 .product__link {
@@ -84,9 +88,12 @@
 
 .clear__cart {
     display: flex;
+    position: absolute;
     cursor: pointer;
     align-items: center;
     justify-content: end;
+    top: -26px;
+    left: 50%;
 }
 
 .product__delete:hover {

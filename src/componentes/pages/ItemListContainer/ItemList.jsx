@@ -6,7 +6,7 @@ export const ItemList = ({ myProducts, agregarAlCarrito, totalQuantity }) => {
    
     
     return (
-        <>
+        <div className="item_container">
             <div className="title">
                 <h2>Mis Productos</h2>
             </div>
@@ -24,6 +24,6 @@ export const ItemList = ({ myProducts, agregarAlCarrito, totalQuantity }) => {
                     />
                 ))}
             </div>
-        </>
+        </div>
     );
 };

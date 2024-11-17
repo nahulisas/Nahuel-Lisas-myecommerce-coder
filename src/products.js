@@ -100,10 +100,17 @@ export let products = [
         stock: 0,
         category: "monitores",
     },
+
+
+
+
+
+
+
+
     
 
     // GABINETES
-
     {
         title: "Gabinete Cougar MX360 ARGB Vidrio Templado ATX",
         price: 53950,
@@ -153,52 +160,177 @@ export let products = [
         category: "gabinetes",
     },
 
+
+
+
+
+
+
+
+
+
     // MEMORIAS
+    {
+        title: "Memoria Team DDR5 64GB (2x32GB) 6000Mhz T-CREATE EXPERT CL34 Black Intel XMP 3.0 / AMD EXPO",
+        price: 274430,
+        imageUrl: 
+            "https://res.cloudinary.com/daerlndit/image/upload/v1731539348/Imganen_general_38660_Memoria_Team_DDR5_64GB__2x32GB__6000Mhz_T-CREATE_EXPERT_CL34_Black_Intel_XMP_3.0___AMD_EXPO_14443ee4-grn_m1uays.jpg",
+        stock: 0,
+        category: "memorias",
+    },
+    {
+        title: "Memoria GeiL DDR4 8GB 3000MHz EVO POTENZA RED",
+        price: 18250,
+        imageUrl: 
+            "https://res.cloudinary.com/daerlndit/image/upload/v1731539343/Imganen_general_32380_Memoria_GeiL_DDR4_16GB_3000MHz_EVO_POTENZA_RED_469a5a9c-grn_kcie0j.jpg",
+        stock: 0,
+        category: "memorias",
+    },
+    {
+        title: "Memoria Team DDR5 32GB (2x16GB) 6400MHz T-Force Delta RGB Black CL40 Intel XMP 3.0",
+        price: 153120,
+        imageUrl: 
+            "https://res.cloudinary.com/daerlndit/image/upload/v1731539339/Imganen_general_29474_Memoria_Team_DDR5_32GB__2x16GB__6400MHz_T-Force_Delta_RGB_Black_CL40_Intel_XMP_3.0_884828e7-grn_gzyelr.jpg",
+        stock: 0,
+        category: "memorias",
+    },
+    {
+        title: "Memoria GeiL DDR4 16GB (2x8GB) 3200MHz EVO X II RGB Black",
+        price: 47650,
+        imageUrl: 
+            "https://res.cloudinary.com/daerlndit/image/upload/v1731539335/Imganen_general_17116_Memoria_GeiL_DDR4_16GB__2x8GB__3200MHz_EVO_X_II_RGB_Black_07cbccd3-grn_mvooag.jpg",
+        stock: 0,
+        category: "memorias",
+    },
+    {
+        title: "Memoria GeiL DDR4 8GB 3000MHZ EVO POTENZA Black",
+        price: 47650,
+        imageUrl: 
+            "https://res.cloudinary.com/daerlndit/image/upload/v1731539331/Imganen_general_17106_Memoria_GeiL_DDR4_8GB_3000MHZ_EVO_POTENZA_Black_d2c138d0-grn_agmti9.jpg",
+        stock: 0,
+        category: "memorias",
+    },
+    {
+        title: "Memoria Team DDR4 8GB 3200MHz T-Force Delta TUF RGB",
+        price: 47650,
+        imageUrl: 
+            "https://res.cloudinary.com/daerlndit/image/upload/v1731539327/Imganen_general_16061_Memoria_Team_DDR4_8GB_3200MHz_T-Force_Delta_TUF_RGB_90e8a715-grn_k0ff9c.jpg",
+        stock: 0,
+        category: "memorias",
+    },
+
+
+
     // NOTEBOOKS
+
+    {
+        title: "Notebook Gamer Lenovo LOQ 15ARP9 15.6' IPS r7-7435HS RTX4050 16GB 512GB SSD NVMe Win11",
+        price: 1654100,
+        imageUrl: 
+            "https://res.cloudinary.com/daerlndit/image/upload/v1731539454/Imganen_general_41540_Notebook_Gamer_Lenovo_LOQ_15ARP9_15.6__IPS_r7-7435HS_RTX4050_16GB_512GB_SSD_NVMe_Win11_60189669-grn_w4lavv.jpg",
+        stock: 0,
+        category: "notebooks",
+    },
+    {
+        title: "Notebook Gamer Acer Nitro V 15.6' FHD i9-13900H RTX4060 16GB DDR5 512GB SSD NVMe Win11",
+        price: 2145770,
+        imageUrl: 
+            "https://res.cloudinary.com/daerlndit/image/upload/v1731539450/Imganen_general_40723_Notebook_Gamer_Acer_Nitro_V_15.6__FHD_i9-13900H_RTX4060_16GB_DDR5_512GB_SSD_NVMe_Win11_32df2d97-grn_l2iecu.jpg",
+        stock: 0,
+        category: "notebooks",
+    },
+    {
+        title: "Notebook Gamer Acer Nitro V 15.6' FHD i9-12900H RTX4060 16GB DDR5 512GB SSD NVMe FREEDOS",
+        price: 2030720,
+        imageUrl: 
+            "https://res.cloudinary.com/daerlndit/image/upload/v1731539446/Imganen_general_40492_Notebook_Gamer_Acer_Nitro_V_15.6__FHD_i9-12900H_RTX4060_16GB_DDR5_512GB_SSD_NVMe_FREEDOS_74d3eefc-grn_kvo7p7.jpg",
+        stock: 0,
+        category: "notebooks",
+    },
+    {
+        title: "Notebook Asus Vivobook 14' FHD Core i3-1215U 8GB 128GB SSD Win11 Quiet Blue",
+        price: 479560,
+        imageUrl: 
+            "https://res.cloudinary.com/daerlndit/image/upload/v1731539442/Imganen_general_40305_Notebook_Asus_Vivobook_14__FHD_Core_i3-1215U_8GB_128GB_SSD_Win11_Quiet_Blue_6bee1770-grn_jswtzy.jpg",
+        stock: 0,
+        category: "notebooks",
+    },
+    {
+        title: "Notebook Gamer MSI Katana B8VF-437US 15.6' FHD 144hz Ryzen 7-8845HS RTX4060 16GB 1TB SSD Win11",
+        price: 2138560,
+        imageUrl: 
+            "https://res.cloudinary.com/daerlndit/image/upload/v1731539438/Imganen_general_40107_Notebook_Gamer_MSI_Katana_B8VF-437US_15.6__FHD_144hz_Ryzen_7-8845HS_RTX4060_16GB_1TB_SSD_Win11_432da9ca-grn_huj3ln.jpg",
+        stock: 0,
+        category: "notebooks",
+    },
+    {
+        title: "Notebook Gamer MSI Sword 16HX B14VFKG-202US 16' i7-14650HX RTX4060 16GB RAM 1TB SSD Win11",
+        price: 2316930,
+        imageUrl: 
+            "https://res.cloudinary.com/daerlndit/image/upload/v1731539435/Imganen_general_40087_Notebook_Gamer_MSI_Sword_16HX_B14VFKG-202US_16__i7-14650HX_RTX4060_16GB_RAM_1TB_SSD_Win11_89bdeaf4-grn_apuoaf.jpg",
+        stock: 0,
+        category: "notebooks",
+    },
+
+
+
+
+
+
     // MOTHERS
 
-
-    // CURSO
-
     {
-        id: "1",
-        title: "Nike",
-        price: 169950,
-        description: "estas son las mejores",
-        imageUrl:
-            "https://res.cloudinary.com/daerlndit/image/upload/v1731535678/Imganen_general_42989_Placa_de_Video_XFX_Radeon_RX_580_8GB_GDDR5_GTS_2048SP_1263b728-grn_n0tvq2.jpg",
+        title: "Mother ASUS ROG STRIX X870-A GAMING WIFI DDR5 AM5",
+        price: 584500,
+        imageUrl: 
+            "https://res.cloudinary.com/daerlndit/image/upload/v1731539421/Imganen_general_42202_Mother_ASUS_ROG_STRIX_X870-A_GAMING_WIFI_DDR5_AM5_5ff73060-grn_ppnuz8.jpg",
         stock: 0,
-        category: "placas de video",
+        category: "mothers",
     },
     {
-        id: "2",
-        title: "wilson advance",
-        price: 14500,
-        stock: 5,
-        description: "Ultra livianas y cuentan con camara de aire",
-        category: "deportivas",
-        imageUrl:
-            "https://res.cloudinary.com/dnqfh2chg/image/upload/v1669430010/foc364fsakkzmausrovn.jpg",
+        title: "Mother MSI MAG Z790 TOMAHAWK WIFI DDR5 S1700",
+        price: 354490,
+        imageUrl: 
+            "https://res.cloudinary.com/daerlndit/image/upload/v1731539416/Imganen_general_40930_Mother_MSI_Z790_PROJECT_ZERO_LGA_1700_Back_Connect_380c0815-grn_t59tvf.jpg",
+        stock: 0,
+        category: "mothers",
     },
     {
-        id: "3",
-        title: "Puma",
-        price: 19000,
-        stock: 10,
-        description:
-            "Las clasicas zapatillas que van para cualquier momento del dia",
-        category: "urbanas",
-        imageUrl:
-            "https://res.cloudinary.com/dnqfh2chg/image/upload/v1669430165/images_lujpmr.jpg",
+        title: "Mother ASUS ROG MAXIMUS Z790 HERO LGA1700 DDR5",
+        price: 751000,
+        imageUrl: 
+            "https://res.cloudinary.com/daerlndit/image/upload/v1731539411/Imganen_general_37927_Mother_ASUS_ROG_MAXIMUS_Z790_HERO_LGA1700_DDR5_4b51facb-grn_j8nar4.jpg",
+        stock: 0,
+        category: "mothers",
     },
     {
-        id: "4",
-        title: "Jaguar",
-        price: 17800,
-        stock: 15,
-        description: "Zapatillas de ultima generacion para el deporte",
-        category: "urbanas",
-        imageUrl:
-            "https://res.cloudinary.com/dnqfh2chg/image/upload/v1669430220/rtokwmt3j03bblbfhwhb.jpg",
+        title: "Mother ASUS ROG STRIX Z790-E GAMING WIFI Intel 12/13th Gen LGA1700 DDR5",
+        price: 555500,
+        imageUrl: 
+            "https://res.cloudinary.com/daerlndit/image/upload/v1731539408/Imganen_general_37396_Mother_ASUS_ROG_STRIX_Z790-E_GAMING_WIFI_Intel_12_13th_Gen_LGA1700_DDR5_ab24af56-grn_behqri.jpg",
+        stock: 0,
+        category: "mothers",
     },
-];
+    {
+        title: "Mother ASUS PRIME A520M-A II/CSM DDR4 AM4",
+        price: 100249,
+        imageUrl: 
+            "https://res.cloudinary.com/daerlndit/image/upload/v1731539403/Imganen_general_32310_Mother_ASUS_PRIME_A520M-A_II_CSM_DDR4_AM4_c5943237-grn_wkm25x.jpg",
+        stock: 0,
+        category: "mothers",
+    },
+    {
+        title: "Mother Asrock B550M Pro4 AM4",
+        price: 129450,
+        imageUrl: 
+            "https://res.cloudinary.com/daerlndit/image/upload/v1731539400/Imganen_general_20050_Mother_Asrock_B550M_Pro4_AM4_0555c73f-grn_ps0yeh.jpg",
+        stock: 0,
+        category: "mothers",
+    },
+]
+
+
+
+
+
+    
