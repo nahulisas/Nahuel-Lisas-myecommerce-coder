@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import Checkout from "./Checkout";
 import CartContext from "../../../context/CartContext/CartContext";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, updateDoc, doc } from "firebase/firestore";
 import { db } from "../../../firebaseConfig";
 import { Alert, Button } from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
@@ -35,6 +35,12 @@ const CheckoutContainer = () => {
         addDoc(refCollection, order).then((res) => {
             setOrderId(res.id);
             clearCart();
+        });
+
+        let refCol = collection(db, "products");
+        order.items.forEach((product) => {
+            let refDoc = doc(refCol, product.id);
+            updateDoc(refDoc, { stock: product.stock - product.quantity });
         });
     };
 

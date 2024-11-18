@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CheckoutCard from "../../common/CheckoutCard/CheckoutCard";
 import "./checkout.css";
 const Checkout = ({ formFunction, capturarInfo, cart, getTotal }) => {
@@ -29,7 +30,14 @@ const Checkout = ({ formFunction, capturarInfo, cart, getTotal }) => {
                             required
                         />
 
-                        <button type="submit">finalizar compra</button>
+                        <button className="form-btn" type="submit">
+                            finalizar compra
+                        </button>
+                        <Link to="/cart">
+                            <button className="form-btn" type="button">
+                                cancelar
+                            </button>
+                        </Link>
                     </form>
                 </div>
                 <div className="order__sumary">

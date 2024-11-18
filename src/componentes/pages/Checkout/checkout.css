@@ -36,8 +36,10 @@ form {
     height: 100%;
 }
 
-form button {
+.form-btn {
     background-color: transparent;
+    width: 100%;
+    text-decoration: none;
     padding: 0.8rem;
     cursor: pointer;
     text-transform: uppercase;
