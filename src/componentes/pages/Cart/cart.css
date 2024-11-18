@@ -14,7 +14,6 @@
 
 .cart__products {
     flex-grow: 1;
-
 }
 
 .cart__totalToPay {
@@ -34,6 +33,7 @@
 }
 
 .totalPay_btn {
+    width: 100%;
     padding: 0.8rem;
     cursor: pointer;
     text-transform: uppercase;
@@ -41,9 +41,12 @@
     color: steelblue;
 }
 
-.totalPay_btn:nth-child(2) {
-    background-color: steelblue;
-    color: white;
+.totalPay_btn.disable {
+    width: 100%;
+    padding: 0.8rem;
+    text-transform: uppercase;
+    border: 1px solid lightgrey;
+    color: lightgray;
 }
 
 .cart__title {
@@ -77,7 +80,6 @@
 .product__title {
     width: 200px;
     text-transform: uppercase;
-    
 }
 
 .product__link {

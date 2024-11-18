@@ -9,21 +9,26 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 const ItemListContainer = () => {
     const { categoryName } = useParams();
     const [items, setItems] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-    useEffect(()=>{
+    useEffect(() => {
         const productsCollection = collection(db, "products");
-        let  docRef = productsCollection;
+        let docRef = productsCollection;
         if (categoryName) {
-            docRef = query(productsCollection, where("category", "==", categoryName))
+            docRef = query(
+                productsCollection,
+                where("category", "==", categoryName)
+            );
         }
-        getDocs(docRef).then(res =>{
-            let products = res.docs.map(doc => {
-                return {...doc.data(), id: doc.id}
-            })
-            setItems(products)
-        })
-    })
 
+        getDocs(docRef).then((res) => {
+            let products = res.docs.map((doc) => {
+                return { ...doc.data(), id: doc.id };
+            });
+            setItems(products);
+            setLoading(false);
+        });
+    });
 
     // agregar al carrito directamente desde el itemListContainer sin entrar al itemDetail del producto
     const { addCart, totalQuantity } = useContext(CartContext);
@@ -32,17 +37,15 @@ const ItemListContainer = () => {
         addCart({ ...producto, quantity: 1 });
     };
 
-
     return (
-       
-        <ItemList
-            myProducts={items}
-            agregarAlCarrito={addToCart}
-            totalQuantity={totalQuantity}
-            
+        <>
+            <ItemList
+                myProducts={items}
+                agregarAlCarrito={addToCart}
+                totalQuantity={totalQuantity}
+                loading={loading}
             />
-       
-        
+        </>
     );
 };
 

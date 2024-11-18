@@ -75,14 +75,23 @@ const Cart = ({ cart, deleteProduct, clearCart, totalQuantity, getTotal }) => {
                             <p>Total</p>
                             <p>${getTotal}</p>
                         </div>
-                        <Link to="/checkout">
-                        <button className="totalPay_btn">
-                            finalizar compra
-                        </button>
+                        <Link to={cart.length > 0 && "/checkout"}>
+                            <button
+                                className={
+                                    cart.length > 0
+                                        ? "totalPay_btn"
+                                        : "totalPay_btn disable"
+                                }
+                            >
+                                comprar
+                            </button>
                         </Link>
-                        <button className="totalPay_btn">
-                            continuar comprando
-                        </button>
+
+                        <Link to="/">
+                            <button className="totalPay_btn">
+                                continuar comprando
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>

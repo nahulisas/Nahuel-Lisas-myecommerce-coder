@@ -13,7 +13,6 @@ const CartContainer = () => {
             totalQuantity={totalQuantity}
             clearCart={clearCart}
             getTotal={getTotal}
-            
         />
     );
 };

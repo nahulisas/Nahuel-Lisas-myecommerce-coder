@@ -24,7 +24,10 @@ function App() {
                                 path="/category/:categoryName"
                                 element={<ItemListContainer />}
                             />
-                            <Route path="/checkout" element={<CheckoutContainer/>}/>
+                            <Route
+                                path="/checkout"
+                                element={<CheckoutContainer />}
+                            />
                         </Routes>
                     </CartContextProvider>
                 </BrowserRouter>
