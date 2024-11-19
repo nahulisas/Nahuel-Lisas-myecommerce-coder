@@ -22,6 +22,9 @@ const Cart = ({ cart, deleteProduct, clearCart, totalQuantity, getTotal }) => {
                 )}
                 <div className="cart__products__container">
                     <div className="cart__products">
+                        {cart.length == 0 && (
+                            <p className="empty">el carrito esta vacio</p>
+                        )}
                         {cart.map((producto) => {
                             return (
                                 <div
@@ -70,29 +73,31 @@ const Cart = ({ cart, deleteProduct, clearCart, totalQuantity, getTotal }) => {
                             );
                         })}
                     </div>
-                    <div className="cart__totalToPay">
-                        <div className="total">
-                            <p>Total</p>
-                            <p>${getTotal}</p>
-                        </div>
-                        <Link to={cart.length > 0 && "/checkout"}>
-                            <button
-                                className={
-                                    cart.length > 0
-                                        ? "totalPay_btn"
-                                        : "totalPay_btn disable"
-                                }
-                            >
-                                comprar
-                            </button>
-                        </Link>
+                    {cart.length == !0 && (
+                        <div className="cart__totalToPay">
+                            <div className="total">
+                                <p>Total</p>
+                                <p>${getTotal}</p>
+                            </div>
+                            <Link to={cart.length > 0 && "/checkout"}>
+                                <button
+                                    className={
+                                        cart.length > 0
+                                            ? "totalPay_btn"
+                                            : "totalPay_btn disable"
+                                    }
+                                >
+                                    comprar
+                                </button>
+                            </Link>
 
-                        <Link to="/">
-                            <button className="totalPay_btn">
-                                continuar comprando
-                            </button>
-                        </Link>
-                    </div>
+                            <Link to="/">
+                                <button className="totalPay_btn">
+                                    continuar comprando
+                                </button>
+                            </Link>
+                        </div>
+                    )}
                 </div>
             </div>
         </>

@@ -111,3 +111,8 @@
     font-size: 1.5rem;
     flex-grow: 1;
 }
+
+.empty {
+    position: absolute;
+    left: 0;
+}
