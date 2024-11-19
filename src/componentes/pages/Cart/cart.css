@@ -1,6 +1,6 @@
 .cart__container {
     width: 80%;
-    margin: 1rem auto;
+    margin: 0 auto;
     padding: 1rem;
     margin-top: 70px;
     display: flex;
@@ -9,11 +9,12 @@
 
 .cart__products__container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     flex-grow: 1;
     gap: 1rem;
     position: relative;
-    width: fit-content;
 }
 
 .cart__totalToPay {
@@ -101,10 +102,6 @@
     display: flex;
     justify-content: space-between;
     margin: 2rem 0 0 0;
-}
-
-.product__totalPay {
-    width: 50px;
 }
 
 .total {
