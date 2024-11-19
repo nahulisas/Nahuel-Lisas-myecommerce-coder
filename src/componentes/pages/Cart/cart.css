@@ -1,8 +1,10 @@
 .cart__container {
     width: 80%;
     margin: 1rem auto;
-    padding: 2rem 0;
+    padding: 1rem;
     margin-top: 70px;
+    display: flex;
+    flex-direction: column;
 }
 
 .cart__products__container {
@@ -11,10 +13,7 @@
     flex-grow: 1;
     gap: 1rem;
     position: relative;
-}
-
-.cart__products {
-    flex-grow: 1;
+    width: fit-content;
 }
 
 .cart__totalToPay {
@@ -59,7 +58,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
@@ -79,7 +77,6 @@
 }
 
 .product__title {
-    width: 200px;
     text-transform: uppercase;
 }
 
@@ -91,12 +88,8 @@
 
 .clear__cart {
     display: flex;
-    position: absolute;
     cursor: pointer;
     align-items: center;
-    justify-content: end;
-    top: -26px;
-    left: 50%;
 }
 
 .product__delete:hover {

@@ -1,11 +1,11 @@
-import { Avatar } from "@mui/material";
 import Badge from "../../common/Badge/Badge";
 import "./navbar.css";
 import logo from "../../../assets/logo.jpg";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Navbar = () => {
-
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <>
@@ -15,8 +15,8 @@ const Navbar = () => {
                         <img className="navbar__logo__img" src={logo} alt="" />
                     </Link>
                 </div>
-                <menu className="navbar__menu__container">
-                    <ul className="navbar__menu">
+                <menu className={`navbar__menu__container ${isOpen && "open"}`}>
+                    <ul className={`navbar__menu`}>
                         <Link className="navbar__menu__link" to="/">
                             <li>Inicio</li>
                         </Link>
@@ -56,7 +56,16 @@ const Navbar = () => {
                     <Link to="/cart">
                         <Badge />
                     </Link>
-                    <Avatar />
+                    <button
+                        className={`menu_toggle ${isOpen && "open"}`}
+                        onClick={() => {
+                            setIsOpen(!isOpen);
+                        }}
+                    >
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </button>
                 </div>
             </nav>
         </>

@@ -12,16 +12,16 @@ const Cart = ({ cart, deleteProduct, clearCart, totalQuantity, getTotal }) => {
                 <div className="cart__subTitle">
                     <h3>Productos</h3>
                 </div>
+                {cart.length > 1 && (
+                    <div onClick={clearCart} className="clear__cart">
+                        <Icon>
+                            <DeleteIcon sx={{ width: "1.2rem" }} />
+                        </Icon>
+                        <p>Vaciar carrito</p>
+                    </div>
+                )}
                 <div className="cart__products__container">
                     <div className="cart__products">
-                        {cart.length > 1 && (
-                            <div onClick={clearCart} className="clear__cart">
-                                <Icon>
-                                    <DeleteIcon sx={{ width: "1.2rem" }} />
-                                </Icon>
-                                <p>Vaciar carrito</p>
-                            </div>
-                        )}
                         {cart.map((producto) => {
                             return (
                                 <div
