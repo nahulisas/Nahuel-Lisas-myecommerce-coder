@@ -56,3 +56,9 @@
 .add_to_cart {
     display: flex;
 }
+
+@media (max-width: 1200px) {
+    .item__detail__container {
+        margin-top: 170px;
+    }
+}
