@@ -8,18 +8,21 @@
 }
 
 .cart__products__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
     gap: 1rem;
-    position: relative;
+    position: relative; */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+}
+
+.cart__products {
 }
 
 .cart__totalToPay {
     background-color: #eee;
-    width: 400px;
     height: 200px;
     padding: 10px;
     display: flex;
@@ -105,14 +108,14 @@
 }
 
 .total {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     font-size: 1.5rem;
     flex-grow: 1;
 }
 
-.empty {
-    position: absolute;
-    left: 0;
+@media (max-width: 1024px) {
+    .cart__products__container {
+        grid-template-columns: 1fr;
+    }
 }

@@ -73,31 +73,29 @@ const Cart = ({ cart, deleteProduct, clearCart, totalQuantity, getTotal }) => {
                             );
                         })}
                     </div>
-                    {cart.length == !0 && (
-                        <div className="cart__totalToPay">
-                            <div className="total">
-                                <p>Total</p>
-                                <p>${getTotal}</p>
-                            </div>
-                            <Link to={cart.length > 0 && "/checkout"}>
-                                <button
-                                    className={
-                                        cart.length > 0
-                                            ? "totalPay_btn"
-                                            : "totalPay_btn disable"
-                                    }
-                                >
-                                    comprar
-                                </button>
-                            </Link>
-
-                            <Link to="/">
-                                <button className="totalPay_btn">
-                                    continuar comprando
-                                </button>
-                            </Link>
+                    <div className="cart__totalToPay">
+                        <div className="total">
+                            <p>Total</p>
+                            <p>${getTotal}</p>
                         </div>
-                    )}
+                        <Link to={cart.length > 0 && "/checkout"}>
+                            <button
+                                className={
+                                    cart.length > 0
+                                        ? "totalPay_btn"
+                                        : "totalPay_btn disable"
+                                }
+                            >
+                                comprar
+                            </button>
+                        </Link>
+
+                        <Link to="/">
+                            <button className="totalPay_btn">
+                                continuar comprando
+                            </button>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </>
